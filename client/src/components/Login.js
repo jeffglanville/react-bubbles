@@ -12,8 +12,8 @@ class Login extends React.Component {
   handleChange = e => {
     this.setState({
       credentials: {
-        username: "Lambda School",
-        password: "i<3Lambd4"
+        ...this.state.credentials,
+        [e.target.name]: e.target.value
       }
     });
   };

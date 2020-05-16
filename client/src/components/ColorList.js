@@ -18,7 +18,7 @@ const ColorList = ({ colors, updateColors }) => {
   const saveEdit = e => {
     e.preventDefault();
     axiosWithAuth()
-    .put(`api/colors/${colorToEdit.id}`, colorToEdit)
+    .put(`/api/colors/${colorToEdit.id}`, colorToEdit)
     .then(res => updateColors([...colors.map((color) => color.id !== colorToEdit.id),res.data]))
     setEditing(false)
     .catch(err => console.log("Err is:", err.response))
