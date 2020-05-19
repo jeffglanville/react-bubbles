@@ -34,7 +34,7 @@ class Login extends React.Component {
   render(){
     return (
       <div className="form">
-        <h2>Hello, and Welcome to the Wonderful World of Bubbles!!</h2>
+        <h2>Hello, Please login to see your bubbles.</h2>
         <form onSubmit={this.login}>
           <div>
             <input
