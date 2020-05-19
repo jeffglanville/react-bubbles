@@ -1,5 +1,6 @@
 import React from "react";
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import './Login.scss';
 
 class Login extends React.Component {
   state = {
@@ -32,23 +33,27 @@ class Login extends React.Component {
   // when you have handled the token, navigate to the BubblePage route
   render(){
     return (
-      <div>
+      <div className="form">
         <h2>Hello, and Welcome to the Wonderful World of Bubbles!!</h2>
         <form onSubmit={this.login}>
-          <input
-            type="text"
-            name="username"
-            value={this.state.credentials.username}
-            placeholder="User Name"
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            name="password"
-            value={this.state.credentials.password}
-            placeholder="Password"
-            onChange={this.handleChange}
-          />
+          <div>
+            <input
+              id="input"
+              type="text"
+              name="username"
+              value={this.state.credentials.username}
+              placeholder="User Name"
+              onChange={this.handleChange}
+            />
+            <input
+              id="input"
+              type="password"
+              name="password"
+              value={this.state.credentials.password}
+              placeholder="Password"
+              onChange={this.handleChange}
+            />
+          </div>
           <button>Log In</button>
         </form>
       </div>

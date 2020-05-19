@@ -11,7 +11,7 @@ import "./styles.scss";
 function App() {
   return (
     <Router>
-      <nav>
+      <nav className="nav">
         <Link to="/logoff">Logoff</Link>
       </nav>
       <div className="App">
